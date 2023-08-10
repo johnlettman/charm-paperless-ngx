@@ -1,0 +1,46 @@
+name: paperless-ngx
+display-name: Paperless-ngx
+summary: Open-source document management system.
+description: |
+  Paperless-ngx is a community-supported open-source document management system
+  that transforms your physical documents into a searchable online archive so
+  you can keep, well, _less paper_.
+
+docs: https://docs.paperless-ngx.com/
+website: https://docs.paperless-ngx.com/
+source:
+  - https://github.com/johnlettman/charm-paperless-ngx
+  - https://github.com/paperless-ngx/paperless-ngx
+
+issues:
+  - https://github.com/johnlettman/charm-paperless-ngx/issues
+  - https://github.com/paperless-ngx/paperless-ngx/issues
+
+maintainers:
+  - John P. Lettman <the@johnlettman.com>
+
+series:
+  - bionic
+  - focal
+  - jammy
+
+provides:
+  website:
+    interface: http
+
+requires:
+  redis:
+    interface: redis
+  db:
+    interface: pgsql
+
+storage:
+  data:
+    type: filesystem
+    location: /opt/paperless/data
+  media:
+    type: filesystem
+    location: /opt/paperless/media
+  consume:
+    type: filesystem
+    location: /opt/paperless/consume

@@ -1,0 +1,7 @@
+{
+    "python.formatting.provider": "none",
+    "python.analysis.extraPaths": ["lib", "src"],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
+}

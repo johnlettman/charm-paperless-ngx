@@ -1,0 +1,35 @@
+type: charm
+parts:
+  charm:
+    charm-binary-python-packages:
+      # bionic
+      - setuptools<=59.6.0; python_version < '3.8'
+      - setuptools_rust<=1.1.2; python_version < '3.8'
+      # focal and jammy
+      - setuptools; python_version >= '3.8'
+      - setuptools_rust; python_version >= '3.8'
+    build-packages:
+      - pkg-config
+      - libffi-dev
+      - libssl-dev
+      - rustc
+      - cargo
+
+bases:
+    - build-on:
+        - name: ubuntu
+          channel: "22.04"
+          architectures: ["amd64"]
+      run-on:
+        - name: ubuntu
+          channel: "22.04"
+          architectures:
+              - amd64
+        - name: ubuntu
+          channel: "20.04"
+          architectures:
+              - amd64
+        - name: ubuntu
+          channel: "18.04"
+          architectures:
+              - amd64
