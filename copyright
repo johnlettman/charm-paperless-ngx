@@ -2,6 +2,7 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0
 
 Files:
  *
+ lib/paperless.py
 Copyright: 2023, John P. Lettman
 License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,6 +16,16 @@ License: Apache-2.0
  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
  License for the specific language governing permissions and limitations
  under the License.
+
+Files:
+ lib/paperless.py
+Copyright: 2023, Przemysław Lal
+License: Apache-2.0
+Comment:
+ A few functions within lib/paperless.py originate from charm-local-juju-users
+ by Przemysław Lal.
+ https://github.com/canonical/charm-local-juju-users/blob/main/lib/local_juju_users.py
+
 
 Files:
  icon.svg

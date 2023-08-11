@@ -4,4 +4,7 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     }
+    "files.associations": {
+        "copyright": "plaintext"
+    }
 }
